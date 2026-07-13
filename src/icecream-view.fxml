@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="500.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="IceCreamController"
+            style="-fx-background-color: linear-gradient(to bottom right, #ffecd2, #fcb69f);">
+
+    <children>
+
+        <VBox spacing="18.0"
+              alignment="TOP_CENTER"
+              prefWidth="500.0"
+              prefHeight="650.0"
+              AnchorPane.topAnchor="0.0"
+              AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0">
+
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+
+            <!-- TITLE -->
+            <Label text="🍦 Ice Cream Parlor">
+                <font>
+                    <Font size="30"/>
+                </font>
+                <style>
+                    -fx-text-fill: #5c2c06;
+                    -fx-font-weight: bold;
+                </style>
+            </Label>
+
+            <!-- CARD -->
+            <VBox spacing="15"
+                  alignment="TOP_LEFT"
+                  prefWidth="420"
+                  style="
+                    -fx-background-color: white;
+                    -fx-background-radius: 20;
+                    -fx-padding: 25;
+                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 12,0,0,4);">
+
+                <Label text="Select Base"
+                       style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                <ComboBox fx:id="baseSelection"
+                          prefWidth="350"
+                          promptText="Choose Cone or Cup"/>
+
+                <Label text="Select Size"
+                       style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                <ComboBox fx:id="sizeSelection"
+                          prefWidth="350"/>
+
+
+                <Label text="Cone Type"
+                       style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                <ComboBox fx:id="coneTypeSelection"
+                          prefWidth="350"/>
+
+                <Label text="Choose Flavors"
+                       style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                <GridPane hgap="15" vgap="12">
+
+                    <children>
+
+                        <CheckBox fx:id="chocolateCB"
+                                  text="Chocolate"
+                                  GridPane.columnIndex="0"
+                                  GridPane.rowIndex="0"/>
+
+                        <CheckBox fx:id="strawberryCB"
+                                  text="Strawberry"
+                                  GridPane.columnIndex="1"
+                                  GridPane.rowIndex="0"/>
+
+                        <CheckBox fx:id="vanillaCB"
+                                  text="Vanilla"
+                                  GridPane.columnIndex="0"
+                                  GridPane.rowIndex="1"/>
+
+                        <CheckBox fx:id="cookiesCB"
+                                  text="Cookies"
+                                  GridPane.columnIndex="1"
+                                  GridPane.rowIndex="1"/>
+
+                    </children>
+                </GridPane>
+
+                <!-- ORDER BUTTON -->
+                <Button fx:id="orderBtn"
+                        text="Place Order"
+                        prefHeight="45"
+                        prefWidth="350"
+                        style="
+                            -fx-background-color: #ff6f61;
+                            -fx-text-fill: white;
+                            -fx-font-size: 16px;
+                            -fx-font-weight: bold;
+                            -fx-background-radius: 15;
+                            -fx-cursor: hand;
+                        "/>
+
+                <!-- BILL -->
+                <Label text="Order Summary"
+                       style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                <TextArea fx:id="billDisplay"
+                          editable="false"
+                          prefHeight="180"
+                          wrapText="true"
+                          style="
+                              -fx-background-radius: 15;
+                              -fx-border-radius: 15;
+                              -fx-font-size: 14px;
+                          "/>
+
+            </VBox>
+
+        </VBox>
+
+    </children>
+</AnchorPane>
