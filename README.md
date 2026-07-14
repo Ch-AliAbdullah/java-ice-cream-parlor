@@ -44,7 +44,7 @@ The Ice Cream Parlor Management System is a desktop application developed using 
 
 ## 📷 Application Preview
 
-*(A screenshot of the application will be added here.)*
+![Ice Cream Parlor GUI](IceCreamParlorGUI.png)
 
 ---
 
